@@ -11,7 +11,10 @@ app.use(bodyParser.json());
 require('dotenv').config()
 const PORT=process.env.PORT
 
-
+app.get('/',(req,res)=>
+{
+    res.redirect('/weather');
+})
 app.use("/",home);
 
 
